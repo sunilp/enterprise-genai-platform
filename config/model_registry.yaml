@@ -1,0 +1,51 @@
+# Model Registry — Approved models with risk classifications
+# Only models listed here may be used in production
+
+models:
+  - name: gpt-4o
+    provider: openai
+    risk_tier: 2
+    approved_for:
+      - question_answering
+      - summarization
+      - extraction
+    data_residency: us
+    max_tokens: 4096
+    notes: "Primary production model. Do not send PII."
+
+  - name: gpt-4o-mini
+    provider: openai
+    risk_tier: 3
+    approved_for:
+      - classification
+      - general
+    data_residency: us
+    max_tokens: 4096
+    notes: "Cost-optimized for low-risk use cases."
+
+  - name: gemini-1.5-pro
+    provider: google
+    risk_tier: 2
+    approved_for:
+      - question_answering
+      - summarization
+    data_residency: configurable
+    max_tokens: 8192
+    notes: "GCP-native. Preferred when data residency in EU is required."
+
+  - name: claude-sonnet-4-20250514
+    provider: anthropic
+    risk_tier: 2
+    approved_for:
+      - question_answering
+      - summarization
+      - extraction
+    data_residency: us
+    max_tokens: 4096
+    notes: "Strong reasoning. Good for complex regulatory Q&A."
+
+not_approved:
+  - name: "Any open-source model without security review"
+    reason: "Requires InfoSec review before production deployment"
+  - name: "Any model hosted on personal/free-tier accounts"
+    reason: "No SLA, no data protection guarantees"
