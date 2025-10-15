@@ -1,0 +1,39 @@
+# Guardrail Configuration
+# Controls input validation and output filtering behavior
+
+input_validation:
+  max_input_length: 10000
+  block_pii: true
+  block_injection: true
+  pii_types:
+    - email
+    - ssn
+    - credit_card
+    - phone
+    - iban
+
+output_filtering:
+  max_output_length: 5000
+  require_disclaimers: true
+  disclaimer_topics:
+    - financial_advice
+    - medical_advice
+    - legal_advice
+  blocked_phrases:
+    - "guaranteed returns"
+    - "risk-free investment"
+    - "100% accurate"
+
+content_safety:
+  enable_toxicity_check: true
+  toxicity_threshold: 0.5
+  categories:
+    - violence
+    - self_harm
+    - profanity
+
+logging:
+  log_all_inputs: true
+  log_all_outputs: true
+  log_blocked_requests: true
+  retention_days: 2555  # 7 years for financial services

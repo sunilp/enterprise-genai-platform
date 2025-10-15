@@ -1,0 +1,26 @@
+# Evaluation Benchmarks
+# Baseline quality thresholds for automated testing
+
+quality_gates:
+  faithfulness:
+    minimum: 0.8
+    target: 0.9
+    description: "Answer must be grounded in retrieved context"
+
+  relevance:
+    minimum: 0.75
+    target: 0.85
+    description: "Answer must address the question"
+
+  groundedness:
+    minimum: 0.7
+    target: 0.85
+    description: "Each claim must be traceable to a source"
+
+  latency_p95_ms:
+    maximum: 5000
+    target: 3000
+    description: "95th percentile response time"
+
+regression_tolerance: 0.05
+eval_frequency: "on_deployment"
