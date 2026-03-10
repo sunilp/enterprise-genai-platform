@@ -61,7 +61,7 @@ class InputValidator:
         if self.block_injection:
             for pattern in self._INJECTION_PATTERNS:
                 if re.search(pattern, text, re.IGNORECASE):
-                    issues.append(f"Potential prompt injection detected")
+                    issues.append("Potential prompt injection detected")
                     return ValidationResult(status=ValidationStatus.BLOCK, issues=issues)
 
         # Check PII

@@ -1,6 +1,5 @@
 """Tests for guardrail modules."""
 
-import pytest
 from src.guardrails.input_validator import InputValidator, ValidationStatus
 from src.guardrails.output_filter import OutputFilter
 

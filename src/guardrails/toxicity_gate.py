@@ -8,7 +8,7 @@ For production use, integrate with a dedicated content safety API
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import List, Optional
+from typing import List
 
 
 @dataclass

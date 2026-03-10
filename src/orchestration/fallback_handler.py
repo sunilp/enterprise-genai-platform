@@ -10,7 +10,7 @@ from __future__ import annotations
 import time
 from dataclasses import dataclass
 from enum import Enum
-from typing import Any, Callable, List, Optional
+from typing import Any, List, Optional
 
 
 class FallbackReason(Enum):
