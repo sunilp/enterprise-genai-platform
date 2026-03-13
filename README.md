@@ -63,6 +63,11 @@ See `docs/design-decisions.md` for the reasoning behind each architectural choic
 
 This is a reference architecture — it demonstrates patterns and trade-offs, not production-ready code. Adapt the patterns to your specific environment, security requirements, and regulatory context.
 
+### Related Writing
+
+- [Your ML Risk Framework Wasn't Built for GenAI](https://sunilprakash.com/writing/ai-governance-genai/)
+- [RAG in Production: What Breaks When You Move Past the Tutorial](https://sunilprakash.com/writing/rag-in-production/)
+
 ## License
 
 Apache 2.0
